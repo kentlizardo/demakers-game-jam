@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3g5pcgpb5ex3"]
+
+[ext_resource type="Script" path="res://scenes/weapon_items/WeaponPickup.gd" id="1_bgtb1"]
+[ext_resource type="PackedScene" uid="uid://djj5b8fgq62v4" path="res://scenes/blank_item.tscn" id="2_q8mkw"]
+[ext_resource type="PackedScene" uid="uid://c055ubbw67qbc" path="res://res/models/item_rogue.gltf" id="3_qhyhm"]
+[ext_resource type="Script" path="res://scripts/Spin.gd" id="4_63ity"]
+
+[node name="RoguePickup" type="Node3D" node_paths=PackedStringArray("item")]
+script = ExtResource("1_bgtb1")
+item = NodePath("Item")
+moduleName = "Rogue"
+
+[node name="Item" parent="." instance=ExtResource("2_q8mkw")]
+lock_rotation = true
+
+[node name="item_rogue" parent="Item" instance=ExtResource("3_qhyhm")]
+script = ExtResource("4_63ity")

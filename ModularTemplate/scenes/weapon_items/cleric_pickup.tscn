@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct25um4ey7fxp"]
+
+[ext_resource type="Script" path="res://scenes/weapon_items/WeaponPickup.gd" id="1_dsejh"]
+[ext_resource type="PackedScene" uid="uid://djj5b8fgq62v4" path="res://scenes/blank_item.tscn" id="2_gb18a"]
+[ext_resource type="PackedScene" uid="uid://bqyuk1fb0ubca" path="res://res/models/item_cleric.gltf" id="3_ns7tk"]
+[ext_resource type="Script" path="res://scripts/Spin.gd" id="4_b6xfo"]
+
+[node name="ClericPickup" type="Node3D" node_paths=PackedStringArray("item")]
+script = ExtResource("1_dsejh")
+item = NodePath("Item")
+moduleName = "Cleric"
+
+[node name="Item" parent="." instance=ExtResource("2_gb18a")]
+lock_rotation = true
+
+[node name="item_cleric" parent="Item" instance=ExtResource("3_ns7tk")]
+script = ExtResource("4_b6xfo")

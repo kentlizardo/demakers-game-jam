@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://chxcosk0crajc"]
+
+[ext_resource type="Script" path="res://scenes/weapon_items/WeaponPickup.gd" id="1_hemiu"]
+[ext_resource type="PackedScene" uid="uid://bnj1hpqahqklb" path="res://scenes/blank_item.tscn" id="1_n5s2n"]
+[ext_resource type="PackedScene" uid="uid://bvyvosk3oymwr" path="res://res/models/item_zero.gltf" id="2_yn7du"]
+[ext_resource type="Script" path="res://scripts/Spin.gd" id="3_5oukv"]
+
+[node name="ZeroPickup" type="Node3D" node_paths=PackedStringArray("item")]
+script = ExtResource("1_hemiu")
+item = NodePath("Item")
+moduleName = "Zero"
+
+[node name="Item" parent="." instance=ExtResource("1_n5s2n")]
+gravity_scale = 0.1
+lock_rotation = true
+
+[node name="item_zero" parent="Item" instance=ExtResource("2_yn7du")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("3_5oukv")

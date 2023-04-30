@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bsb666r6mip34"
+path="res://.godot/imported/motherboard3.obj-079a147a2c3830b047bd99fa6a15bff1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/motherboard3.obj-079a147a2c3830b047bd99fa6a15bff1.mesh"]
+
+source_file="res://res/models/motherboard3.obj"
+dest_files=["res://.godot/imported/motherboard3.obj-079a147a2c3830b047bd99fa6a15bff1.mesh", "res://.godot/imported/motherboard3.obj-079a147a2c3830b047bd99fa6a15bff1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

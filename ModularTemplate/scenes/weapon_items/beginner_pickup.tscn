@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://b83ogpc2ir7hw"]
+
+[ext_resource type="Script" path="res://scenes/weapon_items/WeaponPickup.gd" id="1_2n68a"]
+[ext_resource type="PackedScene" uid="uid://bnj1hpqahqklb" path="res://scenes/blank_item.tscn" id="2_nu2ye"]
+[ext_resource type="PackedScene" uid="uid://cowburcavsb1b" path="res://res/models/item_beginner.gltf" id="3_0yoqk"]
+[ext_resource type="Script" path="res://scripts/Spin.gd" id="4_tha5t"]
+
+[node name="BeginnerPickup" type="Node3D" node_paths=PackedStringArray("item")]
+script = ExtResource("1_2n68a")
+item = NodePath("Item")
+moduleName = "Beginner"
+
+[node name="Item" parent="." instance=ExtResource("2_nu2ye")]
+lock_rotation = true
+
+[node name="item_beginner" parent="Item" instance=ExtResource("3_0yoqk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+script = ExtResource("4_tha5t")

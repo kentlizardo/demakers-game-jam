@@ -1,0 +1,9 @@
+[gd_resource type="Environment" format=3 uid="uid://eno7lm0l7vsp"]
+
+[resource]
+background_color = Color(0.0431373, 0.0196078, 0.14902, 1)
+background_canvas_max_layer = -5
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.03
+tonemap_mode = 2

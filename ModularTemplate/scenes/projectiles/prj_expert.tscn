@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://vu30ex4xj20v"]
+
+[ext_resource type="Script" path="res://scripts/Projectile.gd" id="1_xuwui"]
+[ext_resource type="Texture2D" uid="uid://be2mnhsjwik8g" path="res://res/textures/prj_expert.png" id="2_e7f38"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mfknm"]
+radius = 0.2
+
+[node name="experrt" type="Node3D" node_paths=PackedStringArray("hitbox")]
+script = ExtResource("1_xuwui")
+hitbox = NodePath("Area3D")
+lifeTime = 3.0
+targetGroup = "Enemy"
+ownerGroup = "Player"
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+layers = 1022
+billboard = 1
+texture_filter = 0
+texture = ExtResource("2_e7f38")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_mfknm")

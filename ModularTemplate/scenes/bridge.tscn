@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://wt8wjfonntbd"]
+
+[ext_resource type="Script" path="res://scripts/Bridge.gd" id="1_0mkp2"]
+[ext_resource type="ArrayMesh" uid="uid://cjfsl2glp0ex6" path="res://res/models/door.obj" id="2_pymh1"]
+[ext_resource type="Texture2D" uid="uid://c7iwhkm3fe7ub" path="res://res/models/texture_0.png" id="3_mib4j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tyag5"]
+albedo_texture = ExtResource("3_mib4j")
+texture_filter = 0
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_yicrv"]
+data = PackedVector3Array(2, 1, 0, 1, 0, 0, 1, 1, 0, 2, 0, 0, 1, 0, 0, 2, 1, 0, 2, 2, 0, 1, 1, 0, 1, 2, 0, 2, 1, 0, 1, 1, 0, 2, 2, 0, 2, 3, 0, 1, 2, 0, 1, 3, 0, 2, 2, 0, 1, 2, 0, 2, 3, 0, 1, 3, 0, 0, 2, 0, 0, 3, 0, 1, 2, 0, 0, 2, 0, 1, 3, 0, 1, 2, 0, 0, 1, 0, 0, 2, 0, 1, 1, 0, 0, 1, 0, 1, 2, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, -1, 0, 1, -1, 0, 0, 0, 0, 0, -1, 0, 1, 0, 0, 2, 0, 0, 1, -1, 0, 2, -1, 0, 1, 0, 0, 1, -1, 0, 2, 0, 0, 3, 0, 0, 2, -1, 0, 3, -1, 0, 2, 0, 0, 2, -1, 0, 3, 0, 2, 1, -1, 2, 0, 0, 2, 1, 0, 2, 0, -1, 2, 0, 0, 2, 1, -1, 2, 2, -1, 2, 1, 0, 2, 2, 0, 2, 1, -1, 2, 1, 0, 2, 2, -1, 2, 3, -1, 2, 2, 0, 2, 3, 0, 2, 2, -1, 2, 2, 0, 2, 3, -1, 2, 0, 0, 1, 0, -1, 1, 0, 0, 2, 0, -1, 1, 0, -1, 2, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 1, 0, -1, 0, 0, -1, 1, 0, 0, 1, 1, -1, 2, 0, -1, 2, 1, -1, 1, 0, -1, 2, 0, -1, 1, 1, -1, 1, 2, -1, 2, 1, -1, 2, 2, -1, 1, 1, -1, 2, 1, -1, 1, 2, -1, 1, 3, -1, 2, 2, -1, 2, 3, -1, 1, 2, -1, 2, 2, -1, 1, 3, -1, 0, 3, -1, 1, 2, -1, 1, 3, -1, 0, 2, -1, 1, 2, -1, 0, 3, -1, 0, 2, -1, 1, 1, -1, 1, 2, -1, 0, 1, -1, 1, 1, -1, 0, 2, -1, 0, 1, -1, 1, 0, -1, 1, 1, -1, 0, 0, -1, 1, 0, -1, 0, 1, -1, 2, 3, -1, 1, 3, 0, 1, 3, -1, 2, 3, 0, 1, 3, 0, 2, 3, -1, 1, 3, -1, 0, 3, 0, 0, 3, -1, 1, 3, 0, 0, 3, 0, 1, 3, -1)
+
+[node name="Bridge" type="Node3D" node_paths=PackedStringArray("mesh", "collider")]
+script = ExtResource("1_0mkp2")
+mesh = NodePath("MeshInstance3D")
+collider = NodePath("MeshInstance3D/StaticBody3D/CollisionShape3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_pymh1")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyag5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_yicrv")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://djj5b8fgq62v4"]
+
+[ext_resource type="Script" path="res://scripts/Item.gd" id="1_07eiu"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_rd1gv"]
+radius = 1.5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m7ur7"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[node name="Item" type="RigidBody3D" node_paths=PackedStringArray("PickUpRange")]
+script = ExtResource("1_07eiu")
+PickUpRange = NodePath("PickupRange")
+
+[node name="PickupRange" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PickupRange"]
+shape = SubResource("SphereShape3D_rd1gv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_m7ur7")

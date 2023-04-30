@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4k0axmqbh53u"]
+
+[ext_resource type="Script" path="res://scenes/weapon_items/WeaponPickup.gd" id="1_hrpuc"]
+[ext_resource type="PackedScene" uid="uid://djj5b8fgq62v4" path="res://scenes/blank_item.tscn" id="2_vtyno"]
+[ext_resource type="PackedScene" uid="uid://pmiqumem8i40" path="res://res/models/item_paladin.gltf" id="3_31pk8"]
+[ext_resource type="Script" path="res://scripts/Spin.gd" id="4_rq6wl"]
+
+[node name="PaladinPickup" type="Node3D" node_paths=PackedStringArray("item")]
+script = ExtResource("1_hrpuc")
+item = NodePath("Item")
+moduleName = "Paladin"
+
+[node name="Item" parent="." instance=ExtResource("2_vtyno")]
+lock_rotation = true
+
+[node name="item_paladin" parent="Item" instance=ExtResource("3_31pk8")]
+script = ExtResource("4_rq6wl")

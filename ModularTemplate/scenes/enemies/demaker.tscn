@@ -1,0 +1,112 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbxon41itq250"]
+
+[ext_resource type="Script" path="res://scripts/enemies/DemakerEnemy.gd" id="1_0igwv"]
+[ext_resource type="PackedScene" uid="uid://blwmcxg3a3hfy" path="res://scenes/crt_head.tscn" id="3_btsio"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_817ab"]
+radius = 0.4
+
+[node name="Demaker" type="CharacterBody3D" node_paths=PackedStringArray("driverRoot")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1_0igwv")
+driverRoot = NodePath("Lookers")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_817ab")
+
+[node name="Lookers" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+
+[node name="CRTHead" parent="Lookers" instance=ExtResource("3_btsio")]
+
+[node name="CRTHead2" parent="Lookers" instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -4.37114e-08)
+
+[node name="CRTHead3" parent="Lookers" instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4.37114e-08)
+
+[node name="CRTHead4" parent="Lookers" instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -8.74228e-08)
+
+[node name="CRTHead5" parent="Lookers" instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 8.74228e-08)
+
+[node name="CRTHead6" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+enemyAudio = NodePath("")
+
+[node name="CRTHead7" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, -4.37114e-08)
+enemyAudio = NodePath("")
+
+[node name="CRTHead8" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 4.37114e-08)
+enemyAudio = NodePath("")
+
+[node name="CRTHead9" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -8.74228e-08)
+enemyAudio = NodePath("")
+
+[node name="CRTHead10" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 8.74228e-08)
+enemyAudio = NodePath("")
+
+[node name="CRTHead11" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+enemyAudio = NodePath("")
+
+[node name="CRTHead12" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -4.37114e-08)
+enemyAudio = NodePath("")
+
+[node name="CRTHead13" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, 4.37114e-08)
+enemyAudio = NodePath("")
+
+[node name="CRTHead14" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 2, -8.74228e-08)
+enemyAudio = NodePath("")
+
+[node name="CRTHead15" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 8.74228e-08)
+enemyAudio = NodePath("")
+
+[node name="CRTHead16" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+enemyAudio = NodePath("")
+
+[node name="CRTHead17" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -4.37114e-08)
+enemyAudio = NodePath("")
+
+[node name="CRTHead18" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 4.37114e-08)
+enemyAudio = NodePath("")
+
+[node name="CRTHead19" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, -8.74228e-08)
+enemyAudio = NodePath("")
+
+[node name="CRTHead20" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, 8.74228e-08)
+enemyAudio = NodePath("")
+
+[node name="CRTHead21" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+enemyAudio = NodePath("")
+
+[node name="CRTHead22" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 4, -4.37114e-08)
+enemyAudio = NodePath("")
+
+[node name="CRTHead23" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 4, 4.37114e-08)
+enemyAudio = NodePath("")
+
+[node name="CRTHead24" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 4, -8.74228e-08)
+enemyAudio = NodePath("")
+
+[node name="CRTHead25" parent="Lookers" node_paths=PackedStringArray("enemyAudio") instance=ExtResource("3_btsio")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 4, 8.74228e-08)
+enemyAudio = NodePath("")

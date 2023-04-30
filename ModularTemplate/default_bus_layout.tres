@@ -1,0 +1,22 @@
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://kru6p604gptw"]
+
+[sub_resource type="AudioEffectLimiter" id="AudioEffectLimiter_gcxxy"]
+resource_name = "Limiter"
+ceiling_db = -10.0
+
+[sub_resource type="AudioEffectDistortion" id="AudioEffectDistortion_134ju"]
+resource_name = "Distortion"
+mode = 2
+
+[resource]
+bus/0/volume_db = -5.93075
+bus/0/effect/0/effect = SubResource("AudioEffectLimiter_gcxxy")
+bus/0/effect/0/enabled = true
+bus/1/name = &"Test"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Test 2"
+bus/1/effect/0/effect = SubResource("AudioEffectDistortion_134ju")
+bus/1/effect/0/enabled = true

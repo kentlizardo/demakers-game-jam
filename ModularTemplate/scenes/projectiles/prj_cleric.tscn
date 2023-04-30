@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bayk20rr1d0yw"]
+
+[ext_resource type="Script" path="res://scripts/Projectile.gd" id="1_mnfgb"]
+[ext_resource type="Texture2D" uid="uid://1xdktex10mpb" path="res://res/textures/prj_cleric.png" id="2_xg4aa"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_rak4u"]
+height = 0.2
+radius = 0.2
+
+[node name="cleric" type="Node3D" node_paths=PackedStringArray("hitbox")]
+script = ExtResource("1_mnfgb")
+hitbox = NodePath("Area3D")
+launchVelocity = 30
+lifeTime = 0.3
+targetGroup = "Enemy"
+ownerGroup = "Player"
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+layers = 1022
+modulate = Color(1, 1, 1, 0.427451)
+billboard = 1
+texture_filter = 0
+texture = ExtResource("2_xg4aa")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CylinderShape3D_rak4u")
